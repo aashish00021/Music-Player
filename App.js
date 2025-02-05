@@ -1,15 +1,16 @@
-import { View, Text } from "react-native";
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
+import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
-  );
+    <SafeAreaView style = {{flex:1}}>
+      <View style = {{padding:30}}>
+        <TextInput placeholder='Add' style = {{borderBottomColor:'black', borderBottomWidth:1}}/>
+        <Button title='Add'/>
+      </View>
+    </SafeAreaView>
+  )
 }
+
+const styles = StyleSheet.create({})

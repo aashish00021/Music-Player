@@ -33,4 +33,8 @@ export default function App() {
           }}
         />
       </View>
-    </Safe
+    </SafeAreaView>
+  )
+}
+
+const styles = StyleSheet.create({})

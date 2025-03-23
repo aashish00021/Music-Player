@@ -7,13 +7,16 @@ import Cards from '../../components/home/cards'
 
 export default function Index() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
+    <SafeAreaView style={{ backgroundColor: 'black' }}>
       <StatusBar style="light" />
       <Header />
-      <ScrollView>
-        <Cards title = 'Top picks for you' />
-        <Cards title = 'Top picks for you' />
-        <Cards title = 'Top picks for you' />
+      <ScrollView 
+        showsVerticalScrollIndicator={false} 
+        contentContainerStyle={{ paddingBottom: '10%' }}
+      >
+        <Cards title='Top picks for you' />
+        <Cards title='New releases' />
+        <Cards title='Top 50 - Songs' />
       </ScrollView>
     </SafeAreaView>
   )

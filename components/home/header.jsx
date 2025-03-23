@@ -4,7 +4,7 @@ import { FontAwesome } from '@expo/vector-icons'
 
 export default function Header() {
   return (
-    <View style = {{ flexDirection:'row', justifyContent:'space-between', alignItems:'center', marginHorizontal: 20, marginTop: 10}} >
+    <View style = {{ flexDirection:'row', justifyContent:'space-between', alignItems:'center', marginHorizontal: 20, marginTop: 10, paddingBottom: 10}} >
         <View>
             <Text style = {{color: '#fff', fontSize:30, fontWeight: 'bold'}}>Home</Text>
         </View>

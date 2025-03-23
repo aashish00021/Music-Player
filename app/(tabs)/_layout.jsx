@@ -3,17 +3,19 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{ 
+      tabBarActiveTintColor: 'blue', 
+      tabBarStyle: { 
+        backgroundColor: 'black',
+        borderTopWidth: 0,  // This removes the white line
+        elevation: 0,  // For Android
+        shadowOpacity: 0,  // For iOS
+      } 
+    }}>
       <Tabs.Screen
         name="index"
         options={{
-          href: null, // Hide this tab from the tab bar as it's just a redirect
-        }}
-      />
-      <Tabs.Screen
-        name="home"
-        options={{
-          title: 'Home',
+          title: 'index',
           headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
         }}
@@ -21,9 +23,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="library"
         options={{
-          title: 'library',
+          title: 'Library',
           headerShown: false,
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="book" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="folder" color={color} />,
         }}
       />
     </Tabs>
